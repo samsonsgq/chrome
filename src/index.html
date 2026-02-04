@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Chrome</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="toolbar">
+        <div class="tab-strip">
+          <div class="tab active">
+            <span class="tab-title" id="tab-title">New Tab</span>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="icon" id="back" aria-label="Back">◀</button>
+          <button class="icon" id="forward" aria-label="Forward">▶</button>
+          <button class="icon" id="reload" aria-label="Reload">⟳</button>
+          <input
+            id="address"
+            type="text"
+            placeholder="Search or type a URL"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <span class="status" id="status">Idle</span>
+        </div>
+      </header>
+      <main class="viewport">
+        <iframe
+          id="frame"
+          title="Content"
+          src="about:blank"
+          sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+        ></iframe>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
